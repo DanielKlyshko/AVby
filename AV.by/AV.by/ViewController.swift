@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         view.addSubview(listOfCarsAdTableView)
         addConstrains()
     }
-
+    
+    // MARK: - Constrains config
     private func addConstrains() {
         listOfCarsAdTableView.translatesAutoresizingMaskIntoConstraints = false
         listOfCarsAdTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     
 }
 
+// MARK: - Helpers
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +37,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarAdTableViewCell", for: indexPath) as? CarAdTableViewCell else {return UITableViewCell()}
+        let car = cars[indexPath.row]
+        cell.carConfig(with: car)
         return cell
     }
     
