@@ -31,6 +31,7 @@
 		1C843D392B2A5D000049C270 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C843D272B2A5D000049C270 /* Montserrat-SemiBold.ttf */; };
 		1C843D3A2B2A5D000049C270 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C843D282B2A5D000049C270 /* Montserrat-Black.ttf */; };
 		1C843D3B2B2A5D000049C270 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C843D292B2A5D000049C270 /* Montserrat-ExtraLight.ttf */; };
+		1CA871F62B3B3F7200093724 /* CarsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA871F52B3B3F7200093724 /* CarsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		1C843D272B2A5D000049C270 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		1C843D282B2A5D000049C270 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		1C843D292B2A5D000049C270 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		1CA871F52B3B3F7200093724 /* CarsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				1C843D032B28E8390049C270 /* AppDelegate.swift */,
 				1C843D052B28E8390049C270 /* SceneDelegate.swift */,
 				1C843D072B28E8390049C270 /* ViewController.swift */,
+				1CA871F52B3B3F7200093724 /* CarsData.swift */,
 				1C843D092B28E8390049C270 /* Main.storyboard */,
 				1C843D0C2B28E83A0049C270 /* Assets.xcassets */,
 				1C843D0E2B28E83A0049C270 /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA871F62B3B3F7200093724 /* CarsData.swift in Sources */,
 				1C843D082B28E8390049C270 /* ViewController.swift in Sources */,
 				1C843D042B28E8390049C270 /* AppDelegate.swift in Sources */,
 				1C843D062B28E8390049C270 /* SceneDelegate.swift in Sources */,
