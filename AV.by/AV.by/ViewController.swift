@@ -1,23 +1,30 @@
-//
-//  ViewController.swift
-//  AV.by
-//
-//  Created by Daniel Klyshko on 12.12.23.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
-
+   
+    // MARK: - Properties
     private let listOfCarsAdTableView = UITableView()
     private let cars = CarsConstructor.getMockData()
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        listOfCarsAdTableView.delegate = self
+        listOfCarsAdTableView.dataSource = self
+        listOfCarsAdTableView.register(CarAdTableViewCell.self, forCellReuseIdentifier: "CarAdTableViewCell")
+        listOfCarsAdTableView.backgroundColor = .background
+        view.addSubview(listOfCarsAdTableView)
+        addConstrains()
     }
 
-
+    private func addConstrains() {
+        listOfCarsAdTableView.translatesAutoresizingMaskIntoConstraints = false
+        listOfCarsAdTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        listOfCarsAdTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        listOfCarsAdTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        listOfCarsAdTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -27,11 +34,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "XibTableViewCell", for: indexPath) as? XibTableViewCell else {return UITableViewCell()}
-        cell.delegate = self
-        let car = cars[indexPath.row]
-        cell.carConfig(with: car)
-        cell.cellIndex = indexPath
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarAdTableViewCell", for: indexPath) as? CarAdTableViewCell else {return UITableViewCell()}
         return cell
     }
     
